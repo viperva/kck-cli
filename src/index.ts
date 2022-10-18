@@ -16,7 +16,7 @@ const { data: update }: { data: update } = await axios.get(
   API_URL + "/updates/" + latestUpdateHash
 );
 
-const schedules: schedules = update.data.schedules;
+let schedules: schedules = update.data.schedules;
 
 const { isStationary } = await prompts({
   type: "toggle",
@@ -26,5 +26,3 @@ const { isStationary } = await prompts({
   inactive: "Niestacjonarne",
   initial: true,
 });
-
-console.log(isStationary);
