@@ -77,3 +77,19 @@ export type update = {
     schedules: schedules;
   };
 };
+
+export interface colSpan {
+  col: number;
+  row: number;
+  rowSpan?: number;
+  colSpan?: number;
+  verticalAlignment?: string;
+  alignment?: string;
+}
+export interface groupChoice {
+  lab: { title: string; value: number }[];
+  exercise: { title: string; value: number }[];
+  workshop: { title: string; value: number }[];
+  language: { title: string; value: number }[];
+  PE: { title: string; value: number }[];
+}
